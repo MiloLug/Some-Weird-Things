@@ -1,0 +1,22 @@
+#shader vertex
+#version 330 core
+
+layout(location = 0) in vec4 pos;
+layout(location = 1) in vec4 color;
+
+out vec4 colorIn;
+
+void main(){
+    gl_Position = pos;
+    colorIn = color;
+}
+
+#shader fragment
+#version 330 core
+
+in vec4 colorIn;
+out vec4 colorOut;
+
+void main(){
+    colorOut = colorIn;
+}
